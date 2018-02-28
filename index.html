@@ -3,21 +3,7 @@
 <head>
 <title>THC蛤？</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 2); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-    $(document).ready(function(){
-      $("#sub").click(function(){
-        var a = $("#a").val();
-        var b = $("#b").val();
-		var c = $("#c").val();
-        $.post("http://119.29.15.29:8080/send",{'name':a,'email':b, 'word':c}, function(ret){
-                alert(ret);
-        })
-      });
-    });
-
-
-</script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 2); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <meta name="keywords" content="THC 对这个大胖子没什么说的吗？" />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 </head>
@@ -27,10 +13,10 @@
 		<h2>对这个大胖子没什么说的吗？</h2>
 				<div class="form-info">
 					<form action="http://119.29.15.29:8080/send" method="POST" >
-						<input type="text" class="text" value="你的名字" id="a" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '你的名字';}" >
-						<input type="text" class="text" value="邮箱地址" id="b" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱地址';}" >
-						<input type="text" class="text" value="对THC说的话" id="c" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '对THC说的话';}" >
-                        <button id="sub" value="提交">提交</button>
+						<input type="text" class="text" value="你的名字" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '你的名字';}" >
+						<input type="text" class="text" value="邮箱地址" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '邮箱地址';}" >
+						<input type="text" class="text" value="对THC说的话" name="word" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '对THC说的话';}" >
+						<input type="submit" value="提交">
 					</form>
 				</div>
 		</div>
